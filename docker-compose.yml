@@ -19,7 +19,7 @@ services:
       - "27017:27017"
 
   service:
-    image: jonathasgarcia/microservice-despesa
+    image: 160982/microservice-depesas
     container_name: microservice-despesa
     restart: always
     #Especifica que o serviço "db" é acessável pelo serviço "poc" através do alias mongo-container(que é utilizado para comunicação no application.properties)
@@ -32,7 +32,7 @@ services:
       - db
 
   front:
-    image: jonathasgarcia/frontend-controle-financeiro
+    image: 160982/front-controle-financeiro
     container_name: frontend-controle-financeiro
     restart: always
     links: 
