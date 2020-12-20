@@ -31,10 +31,10 @@
                           </thead>
                           <tbody>
                             <tr *ngFor="let despesas of responseDespesas.data">
-                              <td>{{despesas.first_name}}</td>
-                              <td>{{despesas.first_name}}</td>
-                              <td>{{despesas.first_name}}</td>
-                              <td>{{despesas.first_name}}</td>
+                              <td>{{despesas.descricao}}</td>
+                              <td>{{despesas.dataDespesa}}</td>
+                              <td>{{despesas.valor}}</td>
+                              <td>{{despesas.categoria}}</td>
                               
                               <td><a routerLink="update/{{despesas.id}}">
                                 <img src="../assets/img/editar.png">

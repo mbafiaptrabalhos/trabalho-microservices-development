@@ -19,11 +19,13 @@ export class UpdateDespesasComponent implements OnInit {
   constructor(private despesasService: DespesasService, private route: ActivatedRoute) { }
 
   ngOnInit() {
+   
     this.despesasService.getDespesa("1").subscribe(res => {
-      debugger;
       this.request = {
-        name: res.data.first_name,
-        job: ''
+        descricao: res.data.descricao,
+        dataDespesa: res.data.dataDespesa,
+        valor: res.data.valor,
+        categoria: res.data.categoria
       }
     });
   }

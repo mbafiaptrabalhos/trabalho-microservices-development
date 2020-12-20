@@ -1,37 +1,39 @@
 /*List*/
-export interface User {
+export interface Despesa {
     id: number;
-    email: string;
-    first_name: string;
-    last_name: string;
-    avatar: string;
+    descricao: string;
+    dataDespesa: string;
+    valor: string;
+    categoria: string;
 }
 
 export interface ResponseDespesas {
-    page: number;
-    per_page: number;
-    total: number;
-    total_pages: number;
-    data: User[];
+    id: number;
+    descricao: string;
+    dataDespesa: string;
+    valor: string;
+    categoria: string;
+    data: Despesa[];
 }
 
 /*Create*/
 
 export interface RequestCreate {
-    name: string;
-    job: string;
+    descricao: string;
+    dataDespesa: string;
+    valor: string;
+    categoria: string;
 }
 
 export interface ResponseCreate {
-    name: string;
-    job: string;
-    id: string;
-    createdAt: Date;
+    descricao: string;
+    dataDespesa: string;
+    valor: string;
+    categoria: string;
 }
 
 /* Get User */
 
 export interface ResponseDespesa {
-    data: User;
+    data: Despesa;
 }
-

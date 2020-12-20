@@ -22,25 +22,25 @@
                             <div class="form-group row">
                                 <label for="inputDescricao" class="col-sm-2 col-form-label" style="text-align: end;">Descrição:</label>
                                 <div class="col-sm-10">
-                                  <input [(ngModel)]="request.name" class="form-control" id="inputDescricao">
-                                </div>
+                                  <input [(ngModel)]="request.descricao" class="form-control" id="inputDescricao" placeholder="Descrição da Despesa">
+                                </div> 
                               </div>
                               <div class="form-group row">
                                 <label for="inputData" class="col-sm-2 col-form-label" style="text-align: end;">Data Despesa:</label>
                                 <div class="col-sm-10">
-                                  <input [(ngModel)]="request.name" class="form-control" id="inputData" >
+                                  <input [(ngModel)]="request.dataDespesa" class="form-control" id="inputData" placeholder="Data da Despesa">
                                 </div>
                               </div>
                               <div class="form-group row">
                                 <label for="inputValor" class="col-sm-2 col-form-label" style="text-align: end;">Valor:</label>
                                 <div class="col-sm-10">
-                                  <input  [(ngModel)]="request.name" class="form-control" id="inputValor" placeholder="Valor">
+                                  <input  [(ngModel)]="request.valor" class="form-control" id="inputValor" placeholder="Valor da Despesa">
                                 </div>
                               </div>
                               <div class="form-group row">
                                 <label for="in" class="col-sm-2 col-form-label" style="text-align: end;">Categoria:</label>
                                 <div class="col-sm-10">
-                                  <select class="custom-select">
+                                  <select class="custom-select" [(ngModel)]="request.categoria">
                                     <option selected>Categoria da Despesa</option>
                                     <option value="1">Categoria Um</option>
                                     <option value="2">Categoria Dois</option>
@@ -70,28 +70,3 @@
       </div>
     </div>
 </html>
- <!--<div *ngIf="response">
-                          <div class="alert alert-success" role="alert" *ngIf="response.name" style="margin-right: 15px; margin-left: 15px;"> 
-                            Despesa {{response.name}} cadastrada com sucesso!
-                          </div>
-                          <div class="alert alert-danger" role="alert" *ngIf="!response.name" style="margin-right: 15px; margin-left: 15px;"> 
-                            Erro no cadastro!
-                          </div>
-                        </div>-->
-
-                        <!--<h2>Update Despesas</h2>
-
-<div *ngIf="request">
-    <label>Nome <input placeholder=Nome [(ngModel)]="request.name"></label>
-
-    <br>
-    
-    <label>Profissão<input placeholder=Profissao [(ngModel)]="request.job"></label>
-
-    <br>
-    <br>
-
-    <button (click)="update()">Gravar</button>
-</div>
-
-<br><br>-->

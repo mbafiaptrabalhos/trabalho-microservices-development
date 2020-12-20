@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import { DespesasService } from '../despesas.service';
-import { User } from '../user.model';
+import { Despesa } from '../user.model';
 
 
 @Component({
@@ -11,7 +11,7 @@ import { User } from '../user.model';
 })
 export class DeleteDespesasComponent implements OnInit {
 
-  despesa!: User;
+  despesa!: Despesa;
   response!: string;
   
   constructor(private despesasService: DespesasService, private route: ActivatedRoute) { }

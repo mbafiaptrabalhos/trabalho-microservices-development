@@ -10,8 +10,10 @@ import { RequestCreate, ResponseCreate } from '../user.model';
 export class CreateDespesasComponent implements OnInit {
 
   request: RequestCreate ={
-    name: '', 
-    job: ''
+    descricao: '',
+    dataDespesa: '',
+    valor: '',
+    categoria: '',
   }
 
   response!: ResponseCreate;
