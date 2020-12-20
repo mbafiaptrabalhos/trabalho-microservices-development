@@ -10,7 +10,7 @@ import { RequestCreate, ResponseCreate, ResponseDespesa, ResponseDespesas } from
 
 export class DespesasService {
 
-  private url = "microservice-despesa";
+  private url = "http://localhost:8080/despesas";
 
   constructor(private http: HttpClient) { }
 
