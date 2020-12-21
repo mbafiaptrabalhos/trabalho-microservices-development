@@ -22,9 +22,9 @@ export class DespesasService {
     return this.http.post<ResponseCreate>(this.url, request)
   }
 
-  getDespesa(id: string): Observable<ResponseDespesa>{
+  getDespesa(id: string): Observable<ResponseDespesas>{
     const _url =  `${this.url}/${id}`;
-    return this.http.get<ResponseDespesa>(_url)
+    return this.http.get<ResponseDespesas>(_url)
   }
 
   updateDespesas(id: string, request: RequestCreate): Observable<ResponseCreate>{

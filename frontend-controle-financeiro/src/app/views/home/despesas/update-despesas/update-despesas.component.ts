@@ -15,23 +15,29 @@ export class UpdateDespesasComponent implements OnInit {
   request!: RequestCreate;
 
   response!: string;
+
+  idDespesa: string = '';
   
   constructor(private despesasService: DespesasService, private route: ActivatedRoute) { }
 
   ngOnInit() {
    
-    this.despesasService.getDespesa("1").subscribe(res => {
-      this.request = {
-        descricao: res.data.descricao,
-        dataDespesa: res.data.dataDespesa,
-        valor: res.data.valor,
-        categoria: res.data.categoria
-      }
+    this.route.params.subscribe(params => {
+      this.idDespesa = params['id'];
+
+      this.despesasService.getDespesa(this.idDespesa).subscribe(res => {
+        this.request = {
+          descricao: res.descricao,
+          dataDespesa: res.dataDespesa,
+          valor: res.valor,
+          categoria: res.categoria
+        }
+      });
     });
   }
 
   update(){ 
-    this.despesasService.updateDespesas("1", this.request).subscribe(res => {
+    this.despesasService.updateDespesas(this.idDespesa, this.request).subscribe(res => {
       this.response = "ok"; 
     })
   }

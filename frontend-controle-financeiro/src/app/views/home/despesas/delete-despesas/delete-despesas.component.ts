@@ -13,20 +13,23 @@ export class DeleteDespesasComponent implements OnInit {
 
   despesa!: Despesa;
   response!: string;
-  
+  idDespesa: string = '';
+
   constructor(private despesasService: DespesasService, private route: ActivatedRoute) { }
 
   ngOnInit() {
-     this.despesasService.getDespesa("1").subscribe(res => {
-      this.despesa = res.data;
-     });
-   }
- 
-   delete(){
-     this.despesasService.deleteDespesa("1").subscribe(res => {
-       debugger;
-        this.response = "ok";
-     })
-   }
- 
+    this.route.params.subscribe(params => {
+      this.idDespesa = params['id'];
+      this.despesasService.getDespesa(this.idDespesa).subscribe(res => {
+        this.despesa = res;
+      });
+    });
+  }
+
+  delete() {
+    this.despesasService.deleteDespesa(this.idDespesa).subscribe(res => {
+      this.response = "ok";
+    })
+  }
+
 }
