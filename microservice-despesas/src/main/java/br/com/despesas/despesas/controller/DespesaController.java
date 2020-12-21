@@ -10,6 +10,7 @@ import br.com.despesas.despesas.model.Despesa;
 import br.com.despesas.despesas.service.DespesaService;
 
 @RestController
+@CrossOrigin(origins = "*")
 @RequestMapping("despesas")
 public class DespesaController {
 	
