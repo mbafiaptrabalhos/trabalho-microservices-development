@@ -9,7 +9,7 @@ import { ResponseDespesas } from './user.model';
 })
 export class ListaDespesasComponent implements OnInit {
 
-  responseDespesas!: ResponseDespesas;
+  responseDespesas!: ResponseDespesas[];
 
   constructor(private despesasService: DespesasService ) { }
 

@@ -13,7 +13,7 @@ export interface ResponseDespesas {
     dataDespesa: string;
     valor: string;
     categoria: string;
-    data: Despesa[];
+    // data: Despesa[];
 }
 
 /*Create*/

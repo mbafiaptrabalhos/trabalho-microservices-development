@@ -14,8 +14,8 @@ export class DespesasService {
 
   constructor(private http: HttpClient) { }
 
-  getDespesas(): Observable<ResponseDespesas>{
-    return this.http.get<ResponseDespesas>(this.url)
+  getDespesas(): Observable<ResponseDespesas[]>{
+    return this.http.get<ResponseDespesas[]>(this.url)
   }
 
   createDespesas(request: RequestCreate): Observable<ResponseCreate>{
